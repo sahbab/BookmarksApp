@@ -6,6 +6,6 @@ import './main.html';
 Template.bookmarks.helpers({
   bookmarkList: function(){
     //retrieve all bookmarks from our collection
-    return bookmarksCollection.find();
+    return bookmarksCollection.find({} , {"sort" : {"name" : 1 }});
   }
 })
