@@ -37,7 +37,7 @@
 <template name="bookmarks">
   <ul class="list-group">
     {{#each bookmarkList}}
-    <li class="list-group-item"> <a href="{{url}}">{{name}}</a> {{lastVisited}}  </li>
+    <li class="list-group-item"> <a href="{{url}}">{{name}}</a> <span class="date-highlight">Last Visited: {{lastVisited}} </span> </li>
     {{/each}}
   </ul>
 </template>
