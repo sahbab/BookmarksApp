@@ -9,3 +9,21 @@ Template.bookmarks.helpers({
     return bookmarksCollection.find({} , {"sort" : {"name" : 1 }});
   }
 })
+
+Template.addBookmarkForm.events({
+  'submit .addBookmarkForm' : function(event){
+    event.preventDefault();
+    
+    //get my form values
+    var name = $('#bookmarkName').val();
+    var url = $('#bookmarkUrl').val();
+    
+    //insert a new document into our collection
+    bookmarksCollection.insert({
+      "name" : name,
+      "url" : url,
+      "lastVisited": new Date()
+      
+    })
+  }
+})
