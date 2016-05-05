@@ -1,5 +1,11 @@
 import { Meteor } from 'meteor/meteor';
-
+import { bookmarksCollection from '../collection/collection.js'}
+import {bookmarksDummyData  from '../collection/collection.js'}
 Meteor.startup(() => {
-  // code to run on server at startup
+  //remove any database values that are present
+  bookmarksCollection.remove({}); //delete all records ( this will only work on server side)
+  //add my dummy values
+  for (var i = 0 ; i < bookmarksDummyData.length ; i ++) {
+    bookmarksCollection.insert(bookmarksDummyData[i]);
+  }
 });
