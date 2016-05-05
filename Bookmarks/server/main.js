@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
-import { bookmarksCollection from '../collection/collection.js'}
-import {bookmarksDummyData  from '../collection/collection.js'}
+import { bookmarksCollection from '../collections/collections.js'}
+import {bookmarksDummyData  from '../collections/collections.js'}
 Meteor.startup(() => {
   //remove any database values that are present
   bookmarksCollection.remove({}); //delete all records ( this will only work on server side)
