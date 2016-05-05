@@ -31,13 +31,14 @@
   <h1>Bookmark List </h1>
 </template>
 
-<template name="bookmarksHeading">
+<template name="addBookmarkForm">
   
 </template>
 <template name="bookmarks">
   <ul class="list-group">
     {{#each bookmarkList}}
-    <li class="list-group-item"> <a href="{{url}}">{{name}}</a> <span class="date-highlight">Last Visited: {{lastVisited}} </span> </li>
+    <li class="list-group-item"> <a href="{{url}}">{{name}}</a>
+    <span class="date-highlight">Last Visited: {{lastVisited}} </span> </li>
     {{/each}}
   </ul>
 </template>
